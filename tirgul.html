@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car {
+            color;
+            model;
+            manufacturer;
+            id = 0;
+            static #count=1
+
+            constructor(color,model,manufacturer){
+                this.color = color;
+                this.model = model;
+                this.manufacturer = manufacturer;
+                this.id++;
+                this.id = Car.#count++;
+            }
+        }
+        const car1 = new Car('audi','suv','audi');
+        const car2 = new Car('hyundai','i10','hyundai');
+        const car3 = new Car('mercedes','sedan','mercedes');
+        const car4 = new Car ('mazda', 'coupe','mazda');
+        console.log(car1);
+        console.log(car2);
+        console.log(car3);
+        console.log(car4);
+    </script>
+</body>
+</html>

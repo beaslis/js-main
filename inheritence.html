@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class food {
+            price;
+            name;
+
+            constructor(taste,price,name){
+                this.price = price;
+                this.name = name;
+            }
+        }
+
+        class sweetFood extends food{
+           taste = 'sweet';
+           constructor(price,name){ // constructor does not pass thru inheritence
+            super(price,name);
+           } 
+        }
+        class saltyFood extends food{
+           taste = 'salty';
+           constructor(price,name){ 
+            super(price,name);
+           } 
+        }
+
+        const cookie = new sweetFood(10,'oreo');
+        const pancake = new sweetFood(30,'pancake');
+
+        const pretzel = new saltyFood(12,'bagle');
+        const chips = new saltyFood(7,'chips');
+
+        console.log(cookie);
+        console.log(pancake);
+        console.log(pretzel);
+        console.log(chips);
+
+        const food = new food(500,'falafel');
+        // food.name = 'falafel';
+        // food.price = 50;
+
+         console.log(food);
+
+        const sweet = new sweetFood(10,'cookie');
+        // sweet.taste = 'sweet';
+        // sweet.name = 'cookie';
+        // sweet.price = 10;
+        console.log(sweet); 
+    </script>
+</body>
+</html>

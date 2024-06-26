@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [199,200,4];
+        console.log(arr);
+
+        arr.forEach((item, index) => {
+           console.log(index,item); 
+        });
+
+        arr = arr.filter((item, index) =>{
+            return item >= 200;
+        });
+
+        console.log(arr);
+
+
+        // targil
+
+
+        let fruits = ['apple','banana','watermelon' ,'avocado','tomato'];
+            fruits = fruits.filter((item, index)=>{
+                return !item.startsWith('a');
+            });
+            console.log(fruits);
+
+            //
+
+            let nums = [1,2,3];
+            let numspi10 = nums.map((item, index)=>{
+                return item * 10;
+            });
+            console.log(nums);
+            console.log(numspi10);
+
+            // tirgul
+            let cars = ['mazda','ferari','porsch','hyundai'];
+            let carsAdd = cars.map((item, index)=>{
+                return item + ' - price: 100,000'
+            });
+            console.log(cars);
+            console.log(carsAdd);
+    </script>
+</body>
+</html>
